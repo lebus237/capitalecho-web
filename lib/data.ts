@@ -98,6 +98,20 @@ export const TICKER: TickerItem[] = [
   { name: "EUR / XAF", value: "655,957", change: "0,00 %", date: "parité fixe" },
 ];
 
+/** One thumbnail per series (public/covers). */
+const COVERS: Record<string, { src: string; alt: string }> = {
+  "01": { src: "/covers/2.jpg", alt: "Commerçante sur un marché africain, devant ses tomates et ses billets" },
+  "02": { src: "/covers/3.jpg", alt: "Opérateurs devant les écrans de cotation d’une bourse" },
+  "03": { src: "/covers/4.jpg", alt: "Journaliste lisant des articles de presse à son bureau" },
+  "04": { src: "/covers/1.jpg", alt: "Raffinerie et cuves de stockage au coucher du soleil" },
+  "05": { src: "/covers/5.jpg", alt: "Équipe d’entreprise réunie autour d’un document" },
+  "06": { src: "/covers/6.jpg", alt: "Ingénieurs devant un chantier de pont" },
+  "07": { src: "/covers/7.jpg", alt: "Entrepreneur dans son atelier de conditionnement de noix de cajou" },
+  "08": { src: "/covers/8.jpg", alt: "Bureau avec graphiques financiers, calculatrice et ordinateur" },
+  "09": { src: "/covers/9.jpg", alt: "Entretien entre un dirigeant et une journaliste" },
+};
+export const coverOf = (n: string) => COVERS[n];
+
 export const DEFAULT_SECTION_INDEX = 3; // "04 Africa Impact Deals"
 
 export const editionsOf = (n: string) => EDITIONS.filter((e) => e.n === n);
